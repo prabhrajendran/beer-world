@@ -33,8 +33,8 @@
     - command: sleep 1s
       when: service_apache_status.stdout != ''
 
-    - name: ==>> startup qle tomcat , path = {{tomcat_path}}/bin/startup.sh
-      shell: setsid /bin/sh -i -c "{{tomat_path}}/startup.sh
+    - name: ==>> startup qle tomcat
+      shell: setsid /bin/sh -i -c "{{tomat_path}}/startup.sh"
 
 
 
