@@ -3,7 +3,7 @@
   become: true
 
   vars:
-    tomact_folder : bin
+    tomcat_folder : bin
     tomcat_path : "/root/opt/apache-tomact-9.0.70/{{tomcat_folder}}"
     grep_string : "[/]root/opt/apache-tomcat-9.0.70/{{tomcat_folder}}"
 
