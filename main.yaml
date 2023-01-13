@@ -11,8 +11,8 @@
     - name: copying war file to the destination
       copy: src=/root/myweb/beeroftheworld-0.0.1.jar dest="{{tomcat_path}}/../webapps/"
 
-    - name: shutdown qle tomcat , path = "{{tomcat_path}}/bin"
-      command: sh {{tomcat_path}}/.shutdown.sh
+    - name: shutdown qle tomcat , path = "{{tomcat_path}}"
+      command: sh {{tomcat_path}}/shutdown.sh
 
     - name: ==>> sleep 3s
       command: sleep 3s
