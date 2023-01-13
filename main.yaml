@@ -26,13 +26,6 @@
     - debug: msg= "Check if Apache is running {{ service_apache_status }}"
 
 
-    - name: kill process if tomcat still running
-      shell: kill $(ps aux|grep '{{grep_string }}' | awk '{print $2}'
-      when: service_apache_status.stdout != ''
-
-    - command: sleep 1s
-      when: service_apache_status.stdout != ''
-
     - name: ==>> startup qle tomcat
       shell: setsid /bin/sh -i -c "{{tomat_path}}/startup.sh"
 
