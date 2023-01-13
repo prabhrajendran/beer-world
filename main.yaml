@@ -9,7 +9,7 @@
 
   tasks:
     - name: copying war file to the destination
-      copy: src=./beeroftheworld-0.0.1.jar dest="/home/ec2-user/apache-tomcat-9.0.70/webapps/"
+      copy: src="/root/myweb/beeroftheworld-0.0.1.jar" dest="/home/ec2-user/apache-tomcat-9.0.70/webapps/"
 
     - name: shutdown qle tomcat , path = "{{tomcat_path}}"
       command: sh {{tomcat_path}}/shutdown.sh
