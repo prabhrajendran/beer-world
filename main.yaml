@@ -27,7 +27,7 @@
 
 
     - name: ==>> startup qle tomcat
-      shell: setsid /bin/sh -i -c "{{tomat_path}}/startup.sh"
+      shell: setsid /bin/sh -i -c "{{tomcat_path}}/startup.sh"
 
 
 
